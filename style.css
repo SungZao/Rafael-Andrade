@@ -1,0 +1,259 @@
+:root {
+  --red: #11db9f;
+  --text: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+  margin: 0;
+  background: #000 url("Energia.png") center/cover no-repeat;
+  color: var(--text);
+}
+
+/* TAB */
+.tab-buttons {
+  background: #000;
+  text-align: center;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 14px;
+  font-size: 14px;
+}
+
+/* LAYOUT */
+.personagem-layout {
+  padding: 16px;
+}
+
+
+/* TOPO */
+.foto-box  img{
+
+width: 300px;
+height: 350px;
+
+}
+
+
+
+
+
+
+
+.moldura.pequena {
+  width: 140px;
+  aspect-ratio: 1;
+  border: 12px solid transparent;
+  border-image: url("moldura2.png") 130 round;
+}
+
+.info-box label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid var(--red);
+  color: white;
+}
+
+
+
+/* ATRIBUTOS */
+.atributos-cris {
+  text-align: center;
+}
+
+
+
+.estrela {
+  width: 100%;
+  height: 100%;
+}
+
+
+.atrib {
+  position: absolute;
+  width: 22%;
+  aspect-ratio: 1;
+}
+
+.atrib input {
+  width: 80%;
+  height: 80%;
+  font-size: 22px;
+  text-align: center;
+  border: none;
+  background: transparent;
+
+}
+
+/* posições */
+.for { top: 45%; left: 19%; transform: translate(-50%,-50%);  }
+.agi { top: 22%; left: 52%; transform: translate(-50%,-50%); }
+.int { top: 45%; left: 84%; transform: translate(-50%,-50%); }
+.pre { top: 84%; left: 29%; transform: translate(-50%,-50%); }
+.vig { top: 84%; left: 75%; transform: translate(-50%,-50%); }
+
+/* STATUS */
+.status-control{
+  margin-top: 50px;
+
+}
+
+
+.status-control .stat {
+  margin-bottom: 12px;
+
+}
+
+.label {
+  font-size: 18px;
+  opacity: .7;
+}
+
+.bar {
+  position: relative;
+  height: 38px;
+  background-color: #000;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* BOTÕES */
+.bar button {
+  position: absolute;
+  top: 0;
+  width: 36px;
+  height: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* − ESQUERDA */
+.bar button:first-child {
+  left: 0;
+}
+
+/* + DIREITA */
+.bar button:last-child {
+  right: 0;
+}
+
+
+.fill {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background-color: #000;
+
+}
+
+.vida .fill { background: linear-gradient( to right ,green, rgb(0, 119, 128)); border-radius: 15px; }
+.esforco .fill { background: linear-gradient( to right ,green, rgb(0, 119, 128)); border-radius: 15px;}
+
+.value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.value input {
+  width: 42px;
+  text-align: center;
+  border: none;
+}
+
+/* DEFESA */
+.defesa-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.defesa-box input {
+  width: 60px;
+}
+
+
+
+.foto-box {
+  display: flex;
+  justify-content: center;
+}
+
+.moldura.grande {
+
+  aspect-ratio: 1;
+  border: 18px solid transparent;
+  border-image: url("moldura2.png") 130 round;
+}
+
+.info-box {
+  max-width: 360px;
+}
+
+
+
+
+.info-box label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  font-size: 20px;
+
+}
+
+.info-box input {
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+.estrela-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+
+
+.status-control {
+  max-width: 520px;
+}
+
+.bar {
+  height: 38px;
+}
+
+.fill {
+
+
+  transition: width 0.35s ease-in-out;
+}
