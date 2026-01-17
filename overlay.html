@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay CRIS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body class="overlay">
+
+  <div class="overlay-container">
+<div class="avatar">
+  <img src="icon.webp">
+</div>
+
+    <div class="status-control">
+        <h3 class="nome" id="nome" style="color: rgb(236, 67, 222); font-size: 70px; width: 500px;"></h3>
+
+      <div class="obs vida">
+            <span id="vidaTexto"></span>
+      </div>
+
+      <div class="obs esforco">
+            <span id="esforcoTexto"></span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    var config = {
+      apiKey: "AIzaSyD02xAEzWXP18NbGaF3EBJHdzknf9q7qac",
+      authDomain: "fichasordem-ce8c5.firebaseapp.com",
+      projectId: "fichasordem-ce8c5"
+    };
+
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+  </script>
+
+  <script src="overlay.js"></script>
+</body>
+</html>
