@@ -3,6 +3,18 @@ const urlParams = new URLSearchParams(window.location.search);
 const idFicha = urlParams.get("doc") || "perso11";
 const personagemRef = db.collection("personagens2").doc(idFicha);
 
+const fotoIcon = document.getElementById("fotoIcon");
+
+const numeroFicha = idFicha.replace(/\D/g, "");
+if (numeroFicha) {
+  fotoIcon.src = `icons/icon${numeroFicha}.png`;
+}
+fotoIcon.onerror = () => {
+  fotoIcon.src = "icons/icon.webp";
+};
+
+
+
 let escrevendoLocal = false;
 let fichaAtual = {};
 
