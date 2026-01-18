@@ -266,13 +266,13 @@ body.overlay {
 
 .overlay-container {
   display: flex;
-  align-items: center;
+
   gap: 20px;
 }
 
 .overlay img {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
 
 }
 
@@ -284,23 +284,142 @@ body.overlay {
 
 .obs.vida{
   font-size: 100px;
-  color: rgb(236, 67, 222);
+  color: #A1140E;
+  font-weight: bold;
 }
 
 .obs.esforco{
   font-size: 150px;
-  
+  width: 15%;
   position: absolute;
   top: 70%;
   left: 5%;
   background-color: rgb(15, 15, 15);
   border-radius: 50%;
   color: #0fa175;
+  text-align: center;
 
 }
+
+.obsFoto{
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+
+.obsFoto {
+  width: 500px;
+  height: 500px;
+  border: 5px solid white;
+  border-radius: 50%;
+  overflow: hidden; /* ISSO É O OURO */
+  display: flex;
+
+}
+
+#fotoToken {
+  width: 160%;
+  height: 160%;
+  object-fit: cover;
+  object-position: center 80%; /* sobe o enquadramento pro rosto */
+}
+
 
 l {
 
 
   transition: width 0.35s ease-in-out;
+}
+
+
+.fade-anim {
+  animation: fadePulse 0.45s ease-in-out;
+}
+
+@keyframes fadePulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.glow-vida {
+  animation: glowVida 0.6s ease-out;
+}
+
+@keyframes glowVida {
+  0% { box-shadow: 0 0 0px rgba(0,255,180,0); }
+  50% { box-shadow: 0 0 25px rgba(0,255,180,0.7); }
+  100% { box-shadow: 0 0 0px rgba(0,255,180,0); }
+}
+
+
+.hit-damage {
+  animation: damageFlash 0.5s ease-out;
+}
+
+@keyframes damageFlash {
+  0% {
+    color: #ff3b3b;
+    text-shadow: 0 0 15px rgba(255, 50, 50, 0.8);
+  }
+  100% {
+    color: inherit;
+    text-shadow: none;
+  }
+}
+
+.heal {
+  animation: healFlash 0.5s ease-out;
+}
+
+@keyframes healFlash {
+  0% {
+    color: #2bff8f;
+    text-shadow: 0 0 15px rgba(50, 255, 180, 0.9);
+  }
+  100% {
+    color: inherit;
+    text-shadow: none;
+  }
+}
+
+.dead-shake {
+  animation: deathShake 0.6s ease-in-out;
+}
+
+@keyframes deathShake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+
+.low-effort {
+  animation: effortPulse 0.5s ease-out;
+}
+
+@keyframes effortPulse {
+  0% {
+    background-color: #ffb000;
+    color: black;
+    transform: scale(1.15);
+  }
+  100% {
+    background-color: rgb(15, 15, 15);
+    color: #0fa175;
+    transform: scale(1);
+  }
 }

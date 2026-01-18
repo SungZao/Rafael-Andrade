@@ -7,7 +7,7 @@ const fotoIcon = document.getElementById("fotoIcon");
 
 const numeroFicha = idFicha.replace(/\D/g, "");
 if (numeroFicha) {
-  fotoIcon.src = `icons/icon${numeroFicha}.png`;
+  fotoIcon.src = "icons/"+idFicha+".png"
 }
 fotoIcon.onerror = () => {
   fotoIcon.src = "icons/icon.webp";
@@ -156,3 +156,10 @@ function salvarAuto() {
 document.querySelectorAll("input").forEach(i =>
   i.addEventListener("input", salvarAuto)
 );
+
+
+fotoIcon.style.cursor = "pointer";
+
+fotoIcon.addEventListener("click", () => {
+  window.location.replace(`overlay.html?doc=${idFicha}`);
+});
